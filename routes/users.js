@@ -7,16 +7,20 @@ router.post('/newuser', async (req, res) => {
   console.log('New user', req.body.name);
   if (req.body.token === 'admin') {
 
-    const user = new User({
-      name: req.body.name,
-      password: req.body.password,
-      token: (req.body.name + req.body.password).split('').reverse().join(''),
-    });
+    await User.exists({name: req.body.name}).then(async exist => {
+    if (!exist) {
+      const user = new User({
+        name: req.body.name,
+        password: req.body.password,
+        token: (req.body.name + req.body.password).split('').reverse().join(''),
+      });
 
-    await user.save();
+      await user.save();
 
-    res.send({status: 'Hello Admin. New user add'});
-    console.log('Hello Admin, New user add');
+      res.send({status: 'Hello Admin. New user add'});
+      console.log('Hello Admin, New user add');
+    } else { res.send({status: 'User already Exist'}); }
+    })
   } else res.send({status: 'You are not ADMIN'});
 });
 
