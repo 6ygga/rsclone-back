@@ -6,7 +6,7 @@ const User = require('../models/User');
 
 const router = Router()
 
-router.get('/userdata/', async (req, res) => {
+router.get('/userdata/username', async (req, res) => {
   const userName = req.params['username'];
   const token = req.body.token;
   const userDocs = await userOk(userName, token);

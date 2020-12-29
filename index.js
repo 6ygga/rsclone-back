@@ -1,28 +1,57 @@
-const express = require('express')
-const path = require('path')
-const exphbs = require('express-handlebars')
-const todoRoutes = require('./routes/todos')
-const userRoutes = require('./routes/users')
-const mongoose = require('mongoose')
+const express = require('express');
+const path = require('path');
+const userDataRoutes = require('./routes/userData');
+const userRoutes = require('./routes/users');
+const userAuthRoute = require('./routes/userauth');
 
-const PORT = process.env.PORT || 3000
+const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 
-const app = express()
-const hbs = exphbs.create({
-  defaultLayout: 'main',
-  extname: 'hbs'
-})
+const User = require('./models/User');
 
-app.engine('hbs', hbs.engine)
-app.set('view engine', 'hbs')
-app.set('views', 'views')
+const PORT = process.env.PORT || 3000;
+const tokenKey = '1a2b-3c4d-5e6f-7g8h';
 
-app.use(express.urlencoded({ extended: true }))
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(todoRoutes)
-app.use(userRoutes)
+app.use(userAuthRoute);
+
+app.use((req, res, next) => {
+  if(req.headers.authorization){
+    jwt.verify(req.headers.authorization.split(' ')[1],
+      tokenKey,
+      async (err, payload) => {
+      if(err) next();
+      else if(payload) {
+
+        await User.findOne({
+          name: payload.name
+        }, function(err, docs) {
+          if (err || (!err && !docs)) {
+            console.log('Authorization error! ', err || 'err & docs is empty');
+            return res.status(400).send({error: 'Name doesnt match Password'});
+          }
+
+          req.user = payload.name;
+          next();
+        });
+
+        // if(!req.user) next();
+
+      }
+    });
+  }
+
+  // next();
+});
+
+app.use(userRoutes);
+app.use(userDataRoutes);
+
 
 async function start() {
   try {
@@ -32,13 +61,13 @@ async function start() {
         useNewUrlParser: true,
         useFindAndModify: false
       }
-    )
+    );
     app.listen(PORT, () => {
-      console.log('Server has been started...')
+      console.log(`Server listens http://localhost:${PORT}`);
     })
   } catch (e) {
-    console.log(e)
+    console.log(e);
   }
 }
 
-start()
+start();

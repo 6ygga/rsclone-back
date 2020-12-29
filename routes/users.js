@@ -1,7 +1,17 @@
 const {Router} = require('express');
 const User = require('../models/User');
-const userOk = require('../models/userok')
 const router = Router();
+
+router.get('/', (req, res) => {
+  res.send('<h1>RS Clone Server Started</h1>');
+});
+
+router.get('/test', (req, res) => {
+  if(req.user)
+    return res.status(200).json(req.user);
+  else
+    return res.status(401).json({message: 'Not authorized'});
+});
 
 router.post('/newuser', async (req, res) => {
   console.log('New user', req.body.name);
@@ -24,42 +34,14 @@ router.post('/newuser', async (req, res) => {
   } else res.send({status: 'You are not ADMIN'});
 });
 
-router.post('/auth', (req, res) => {
-  console.log('Hello');
-  if (req.body.token === 'admin') {
-    res.send('Hello Admin');
-    console.log('Hello Admin');
-  }
-});
-
-router.post('/auth/:username', async (req, res) => {
-
-  const userName = req.params['username'];
-  const userPassword = req.body.password;
-
-  if (!userPassword) {
-    console.log('Current password empty');
-    return res.status(400).send({error: 'Empty Password'});
-  }
-
- User.findOne({
-    name: userName,
-    password: userPassword
-  }, function(err, docs) {
-    if (err) {
-      console.log('Name error! ', err);
-      return false;
-    }
-
-    if(!err && !docs) {
-      console.log('Name doesnt match Password');
-      return res.status(400).send({error: 'Name doesnt match Password'});
-    }
-
-    res.send({token: docs.token});
-  });
-  console.log('GET users Token');
-});
+// router.post('/auth', (req, res) => {
+//   console.log('Hello');
+//   if (req.body.token === 'admin') {
+//     res.send('Hello Admin');
+//     console.log('Hello Admin');
+//   }
+// });
+//
 
 module.exports = router;
 
