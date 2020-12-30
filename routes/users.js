@@ -2,9 +2,7 @@ const {Router} = require('express');
 const User = require('../models/User');
 const router = Router();
 
-router.get('/', (req, res) => {
-  res.send('<h1>RS Clone Server Started</h1>');
-});
+
 
 router.get('/test', (req, res) => {
   if (req.user)

@@ -1,9 +1,9 @@
-const { Schema, model } = require('mongoose')
+const { Schema, model } = require('mongoose');
 
 const userDataScheme = new Schema({
-  token: {
+  name: {
     type: String,
     default: null
   }
-})
-module.exports = model('UserData', userDataScheme)
+});
+module.exports = model('UserData', userDataScheme);

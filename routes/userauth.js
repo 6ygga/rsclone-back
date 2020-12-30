@@ -5,6 +5,10 @@ const jwt = require('jsonwebtoken');
 
 const tokenKey = '1a2b-3c4d-5e6f-7g8h';
 
+router.get('/', (req, res) => {
+  res.send('<h1>RS Clone Server Started</h1>');
+});
+
 router.post('/auth/', async (req, res) => {
 
   // const userName = req.params['username'];
