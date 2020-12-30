@@ -3,7 +3,6 @@ const User = require('../models/User');
 const router = Router();
 
 
-
 router.get('/test', (req, res) => {
   if (req.user)
     return res.status(200).json({name: req.user, preference: req.preference});
