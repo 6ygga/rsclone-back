@@ -32,7 +32,8 @@ router.post('/auth/', async (req, res) => {
 
     res.status(200).json({
       name: docs.name,
-      token: jwt.sign({name: docs.name}, tokenKey)
+      preference: docs.preference,
+      token: jwt.sign({name: docs.name, preference: docs.preference}, tokenKey)
     });
   });
   console.log('User Token sent');

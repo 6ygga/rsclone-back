@@ -37,6 +37,7 @@ app.use((req, res, next) => {
           }
 
           req.user = payload.name;
+          req.preference = payload.preference;
           next();
         });
 

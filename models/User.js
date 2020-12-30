@@ -9,7 +9,7 @@ const userScheme = new Schema({
     type: String,
     required: true
   },
-  token: {
+  preference: {
     type: String,
     default: null
   }

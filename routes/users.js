@@ -7,41 +7,52 @@ router.get('/', (req, res) => {
 });
 
 router.get('/test', (req, res) => {
-  if(req.user)
-    return res.status(200).json(req.user);
+  if (req.user)
+    return res.status(200).json({name: req.user, preference: req.preference});
   else
     return res.status(401).json({message: 'Not authorized'});
 });
 
-router.post('/newuser', async (req, res) => {
-  console.log('New user', req.body.name);
-  if (req.body.token === 'admin') {
+router.get('/users', async (req, res) => {
+  if (req.preference === 'admin') {
+    await User.find({},async (err, docs) => {
+      if (err) {
+        return res.status(400).send('user list error')
+      }
 
-    await User.exists({name: req.body.name}).then(async exist => {
-    if (!exist) {
-      const user = new User({
-        name: req.body.name,
-        password: req.body.password,
-        token: (req.body.name + req.body.password).split('').reverse().join(''),
-      });
-
-      await user.save();
-
-      res.send({status: 'Hello Admin. New user add'});
-      console.log('Hello Admin, New user add');
-    } else { res.send({status: 'User already Exist'}); }
-    })
-  } else res.send({status: 'You are not ADMIN'});
+      res.status(200).json(docs.map(item => {
+          return {
+            name: item.name,
+            preference: item.preference
+          };
+      }));
+    });
+  } else res.status(401).send({status: 'You are not ADMIN'});
 });
 
-// router.post('/auth', (req, res) => {
-//   console.log('Hello');
-//   if (req.body.token === 'admin') {
-//     res.send('Hello Admin');
-//     console.log('Hello Admin');
-//   }
-// });
-//
+
+router.post('/newuser', async (req, res) => {
+  console.log('New user', req.body.name);
+  if (req.preference === 'admin') {
+
+    await User.exists({name: req.body.name}).then(async exist => {
+      if (!exist) {
+        const user = new User({
+          name: req.body.name,
+          password: req.body.password,
+          preference: req.body.preference,
+        });
+
+        await user.save();
+
+        res.status(200).send({status: 'Hello Admin. New user added'});
+        console.log('Hello Admin, New user added');
+      } else {
+        res.status(400).send({status: 'User already Exist'});
+      }
+    });
+  } else res.status(401).send({status: 'You are not ADMIN'});
+});
 
 module.exports = router;
 
@@ -53,9 +64,9 @@ module.exports = router;
 //       'content-Type': 'application/json;charset=UTF-8'
 //     },
 //     body:JSON.stringify({
-//       name:'alex',
-//       password:'1234',
-//       token:'admin'
+//       name:'admin',
+//       password:'admin',
+//       token:
 //     })
 //   }).then(data => data.json()).then(data => console.log(data))
 
@@ -65,10 +76,11 @@ module.exports = router;
 //     headers:{
 //       'Accept': 'application/json, text/plain, */*',
 //       'content-Type': 'application/json;charset=UTF-8'
+//       'authorisation': 'Bearer *******token********'
 //     },
 //     body:JSON.stringify({
-//       name:'alex',
-//       password:'1234',
-//       token:'admin'
+//       name:'dima',
+//       password:'dima',
+//       preference: 'user'
 //     })
 //   }).then(data => data.json()).then(data => console.log(data))
