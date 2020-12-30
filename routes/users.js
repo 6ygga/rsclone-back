@@ -53,7 +53,7 @@ router.post('/newuser', async (req, res) => {
 
 module.exports = router;
 
-// fetch('http://localhost:3000/auth/alex',
+// fetch('http://localhost:3000/auth',
 //   {
 //     method:'POST',
 //     headers:{
@@ -62,8 +62,7 @@ module.exports = router;
 //     },
 //     body:JSON.stringify({
 //       name:'admin',
-//       password:'admin',
-//       token:
+//       password:'admin'
 //     })
 //   }).then(data => data.json()).then(data => console.log(data))
 

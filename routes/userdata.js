@@ -3,7 +3,7 @@ const UserData = require('../models/UserData');
 
 const router = Router();
 
-router.get('/userdata/:username', async (req, res) => {
+router.get('/userdata', async (req, res) => {
   const userName = req.params['username'];
   const token = req.body.token;
 
