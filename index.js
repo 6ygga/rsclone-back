@@ -3,6 +3,7 @@ const path = require('path');
 const userDataRoutes = require('./routes/userdata');
 const userRoutes = require('./routes/users');
 const userAuthRoute = require('./routes/userauth');
+const cors = require('cors');
 
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
@@ -14,6 +15,7 @@ const tokenKey = '1a2b-3c4d-5e6f-7g8h';
 
 const app = express();
 
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
