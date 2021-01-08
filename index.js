@@ -3,6 +3,7 @@ const path = require('path');
 const userDataRoutes = require('./routes/userdata');
 const userRoutes = require('./routes/users');
 const userAuthRoute = require('./routes/userauth');
+const userRegister = require('./routes/usernew');
 const cors = require('cors');
 
 const mongoose = require('mongoose');
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(userRegister);
 app.use(userAuthRoute);
 
 app.use((req, res, next) => {

@@ -28,29 +28,6 @@ router.get('/users', async (req, res) => {
 });
 
 
-router.post('/newuser', async (req, res) => {
-  console.log('New user', req.body.name);
-  if (req.preference === 'admin') {
-
-    await User.exists({name: req.body.name}).then(async exist => {
-      if (!exist) {
-        const user = new User({
-          name: req.body.name,
-          password: req.body.password,
-          preference: req.body.preference,
-        });
-
-        await user.save();
-
-        res.status(200).send({status: 'Hello Admin. New user added'});
-        console.log('Hello Admin, New user added');
-      } else {
-        res.status(400).send({status: 'User already Exist'});
-      }
-    });
-  } else res.status(401).send({status: 'You are not ADMIN'});
-});
-
 module.exports = router;
 
 // fetch('http://localhost:3000/auth',
