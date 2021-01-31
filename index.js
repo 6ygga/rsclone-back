@@ -44,14 +44,9 @@ app.use((req, res, next) => {
           req.preference = payload.preference;
           next();
         });
-
-        // if(!req.user) next();
-
       }
     });
   }
-
-  // next();
 });
 
 app.use(userRoutes);
