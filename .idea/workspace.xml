@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cf386eb-a387-4ee1-b08e-856ab453f6cf" name="Default Changelist" comment="feat: add user data">
+    <list default="true" id="4cf386eb-a387-4ee1-b08e-856ab453f6cf" name="Default Changelist" comment="fix: update user data">
+      <change afterPath="$PROJECT_DIR$/models/UserDataM.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/userdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userdata.js" afterDir="false" />
     </list>
@@ -70,6 +71,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="ts.external.directory.path" value="C:\work\rsclone\rsclone-back\functions\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\work\rsclone\rsclone-back\models" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.dev (1)">
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -144,7 +150,7 @@
       <workItem from="1610088151838" duration="2667000" />
       <workItem from="1612112467483" duration="2470000" />
       <workItem from="1612114963446" duration="17000" />
-      <workItem from="1612169158089" duration="1877000" />
+      <workItem from="1612169158089" duration="3388000" />
     </task>
     <task id="LOCAL-00001" summary="init: back rsclone">
       <created>1609076648039</created>
@@ -237,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612114748459</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: update user data">
+      <created>1612172062070</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612172062070</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +284,8 @@
     <MESSAGE value="feat: add cors" />
     <MESSAGE value="feat: add user w/o auth" />
     <MESSAGE value="feat: add user data" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add user data" />
+    <MESSAGE value="fix: update user data" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update user data" />
   </component>
   <component name="WindowStateProjectService">
     <state x="433" y="610" key="#ESLint" timestamp="1609067559757">
@@ -294,22 +308,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="756" y="236" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1612114977808" />
-    <state width="1256" height="313" key="GridCell.Tab.0.bottom" timestamp="1612114937848">
+    <state width="1235" height="223" key="GridCell.Tab.0.bottom" timestamp="1612202536832">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1256" height="313" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937848" />
-    <state width="1256" height="313" key="GridCell.Tab.0.center" timestamp="1612114937848">
+    <state width="1235" height="223" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1612202536832" />
+    <state width="1235" height="223" key="GridCell.Tab.0.center" timestamp="1612202536832">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1256" height="313" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937848" />
-    <state width="1256" height="313" key="GridCell.Tab.0.left" timestamp="1612114937848">
+    <state width="1235" height="223" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1612202536832" />
+    <state width="1235" height="223" key="GridCell.Tab.0.left" timestamp="1612202536832">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1256" height="313" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937848" />
-    <state width="1256" height="313" key="GridCell.Tab.0.right" timestamp="1612114937848">
+    <state width="1235" height="223" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1612202536832" />
+    <state width="1235" height="223" key="GridCell.Tab.0.right" timestamp="1612202536832">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1256" height="313" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937848" />
+    <state width="1235" height="223" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1612202536832" />
     <state width="1256" height="313" key="GridCell.Tab.1.bottom" timestamp="1612114937849">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -362,10 +376,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="66" y="228" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1609347668063" />
-    <state x="157" y="432" key="Vcs.Push.Dialog.v2" timestamp="1612114755359">
+    <state x="157" y="432" key="Vcs.Push.Dialog.v2" timestamp="1612172067115">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="157" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1612114755359" />
+    <state x="157" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1612172067115" />
     <state x="366" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609854756214">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
