@@ -20,9 +20,12 @@ router.post('/userdata', async (req, res) => {
     user: req.user,
     data: data
   });
-  userData.save().then(() => {
+  UserData.findOneAndUpdate({user: req.user},{
+    user: req.user,
+    data: data
+  }, {upsert: true} ).then((data) => {
     console.log('User data saved!');
-    return res.status(200).json({message: 'User data saved!'});
+    return res.status(200).json({message: 'User data saved!', prevData: data});
   }).catch(err => {
     console.log('Error saving userData to DB: ', err);
     return res.status(400).json({error: 'Error saving userData to DB', err: err});
@@ -30,23 +33,3 @@ router.post('/userdata', async (req, res) => {
 });
 
 module.exports = router;
-// User.findOne({
-//   name: userName,
-// }, function(err, docs) {
-//   if (err) {
-//     console.log(err);
-//     return res.status(400).send('Name error!');
-//   }
-//
-//   if (!password) res.status(400).send('Current password does not match');
-//
-//   if (docs.password === password) {
-//     res.status(200);
-//     res.send({
-//       userName: userName,
-//       data: 'GET UserData OK'
-//     });
-//   } else {
-//     res.status(400).send('Current password does not match');
-//   }
-// });
