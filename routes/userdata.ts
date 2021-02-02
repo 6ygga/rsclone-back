@@ -1,12 +1,12 @@
-const { Router } = require('express');
-const UserData = require('../models/UserData');
-const UserDataM = require('../models/UserDataM');
+import {Router} from "express";
+import UserData from "../models/UserData";
+import UserDataM from "../models/UserDataM";
 
 const router = Router();
 
 router.get('/userdata', async (req, res) => {
 
-  await UserData.findOne({user: req.user}).then(data => {
+  await UserData.findOne({user: req['user']}).then(data => {
     console.log('User data got!');
     return res.status(200).json(data);
   }).catch(err => {
@@ -17,8 +17,8 @@ router.get('/userdata', async (req, res) => {
 
 router.post('/userdata', async (req, res) => {
   const data = req.body.data;
-  UserData.findOneAndUpdate({user: req.user},{
-    user: req.user,
+  UserData.findOneAndUpdate({user: req['user']},{
+    user: req['user'],
     data: data
   }, {upsert: true} ).then((data) => {
     console.log('User data saved!');
@@ -31,7 +31,7 @@ router.post('/userdata', async (req, res) => {
 
 router.get('/userdatam', async (req, res) => {
 
-  await UserDataM.findOne({user: req.user}).then(data => {
+  await UserDataM.findOne({user: req['user']}).then(data => {
     console.log('User data got!');
     return res.status(200).json(data);
   }).catch(err => {
@@ -42,8 +42,8 @@ router.get('/userdatam', async (req, res) => {
 
 router.post('/userdatam', async (req, res) => {
   const data = req.body.data;
-  UserDataM.findOneAndUpdate({user: req.user},{
-    user: req.user,
+  UserDataM.findOneAndUpdate({user: req['user']},{
+    user: req['user'],
     data: data
   }, {upsert: true} ).then((data) => {
     console.log('User data saved!');
@@ -54,4 +54,4 @@ router.post('/userdatam', async (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;

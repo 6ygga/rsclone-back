@@ -25,5 +25,4 @@ router.post('/newuser', async (req, res) => {
   // } else res.status(401).send({status: 'You are not ADMIN'});
 });
 
-
-module.exports = router;
+export default router;

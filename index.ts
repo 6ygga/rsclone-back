@@ -1,15 +1,13 @@
-const express = require('express');
-const path = require('path');
-const userDataRoutes = require('./routes/userdata');
-const userRoutes = require('./routes/users');
-const userAuthRoute = require('./routes/userauth');
-const userRegister = require('./routes/usernew');
-const cors = require('cors');
-
-const mongoose = require('mongoose');
-const jwt = require('jsonwebtoken');
-
-const User = require('./models/User');
+import express from "express";
+import path from "path";
+import userDataRoutes from "./routes/userdata";
+import userRoutes from "./routes/users";
+import userAuthRoute from "./routes/userauth";
+import userRegister from "./routes/usernew";
+import cors from "cors";
+import mongoose from "mongoose";
+import jwt from "jsonwebtoken";
+import User from "./models/User";
 
 const PORT = process.env.PORT || 3000;
 const tokenKey = '1a2b-3c4d-5e6f-7g8h';
@@ -40,8 +38,8 @@ app.use((req, res, next) => {
             return res.status(400).send({error: 'Name doesnt match Password'});
           }
 
-          req.user = payload.name;
-          req.preference = payload.preference;
+          req['user'] = payload.name;
+          req['preference'] = payload.preference;
           next();
         });
       }

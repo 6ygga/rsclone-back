@@ -1,8 +1,8 @@
-const {Router} = require('express');
-const User = require('../models/User');
-const router = Router();
-const jwt = require('jsonwebtoken');
+import {Router} from "express";
+import User from "../models/User";
+import jwt from "jsonwebtoken";
 
+const router = Router();
 const tokenKey = '1a2b-3c4d-5e6f-7g8h';
 
 router.get('/', (req, res) => {
@@ -35,12 +35,12 @@ router.post('/auth/', async (req, res) => {
     }
 
     res.status(200).json({
-      name: docs.name,
-      preference: docs.preference,
-      token: jwt.sign({name: docs.name, preference: docs.preference}, tokenKey)
+      name: docs['user'],
+      preference: docs['preference'],
+      token: jwt.sign({name: docs['name'], preference: docs['preference']}, tokenKey)
     });
   });
   console.log('User Token sent');
 });
 
-module.exports = router;
+export default router;
