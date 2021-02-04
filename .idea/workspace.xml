@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4cf386eb-a387-4ee1-b08e-856ab453f6cf" name="Default Changelist" comment="feat: user data Math">
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/UserData.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/UserDataM.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserDataM.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/userauth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userauth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/userdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userdata.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/usernew.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/usernew.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1mEX0qDORnF0Eub5svec7xdIDeN" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\work\rsclone\rsclone-back" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\work\rsclone\rsclone-back\models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev (1)">
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/functions/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/functions/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/functions/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.dev (1)" />
+        <item itemvalue="npm.serve" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.deploy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4cf386eb-a387-4ee1-b08e-856ab453f6cf" name="Default Changelist" comment="" />
+      <created>1609059504073</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609059504073</updated>
+      <workItem from="1609059505314" duration="6073000" />
+      <workItem from="1609068239434" duration="25454000" />
+      <workItem from="1609134574842" duration="4002000" />
+      <workItem from="1609237591792" duration="23000" />
+      <workItem from="1609254241774" duration="13234000" />
+      <workItem from="1609303005362" duration="13965000" />
+      <workItem from="1609500282928" duration="172000" />
+      <workItem from="1609774767199" duration="42000" />
+      <workItem from="1609854666242" duration="5125000" />
+      <workItem from="1609878726486" duration="628000" />
+      <workItem from="1610088151838" duration="2667000" />
+      <workItem from="1612112467483" duration="2470000" />
+      <workItem from="1612114963446" duration="17000" />
+      <workItem from="1612169158089" duration="3924000" />
+      <workItem from="1612245151345" duration="213000" />
+      <workItem from="1612291100380" duration="1017000" />
+    </task>
+    <task id="LOCAL-00001" summary="init: back rsclone">
+      <created>1609076648039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609076648039</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: create user + get token">
+      <created>1609102555745</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609102555745</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: register new user">
+      <created>1609136794793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609136794793</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: remove view &amp; add JWT token">
+      <created>1609273918427</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609273918427</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: remove second route newuser">
+      <created>1609332984468</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609332984468</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: thmthn">
+      <created>1609347433182</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609347433182</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: file name">
+      <created>1609347792225</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609347792225</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: node js">
+      <created>1609349028546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609349028546</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix: node js">
+      <created>1609349269735</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609349269735</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix: mistakes">
+      <created>1609350939093</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609350939093</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: add cors">
+      <created>1609854805538</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609854805538</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: add user w/o auth">
+      <created>1610089168148</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610089168148</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: add user data">
+      <created>1612114748459</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612114748459</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix: update user data">
+      <created>1612172062070</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612172062070</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: user data Math">
+      <created>1612202833182</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612202833182</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init: back" />
+    <MESSAGE value="init: back rsclone" />
+    <MESSAGE value="feat: create user + get token" />
+    <MESSAGE value="fix: register new user" />
+    <MESSAGE value="feat: remove view" />
+    <MESSAGE value="feat: remove view &amp; add JWT token" />
+    <MESSAGE value="fix: remove second route newuser" />
+    <MESSAGE value="fix: thmthn" />
+    <MESSAGE value="fix: file name" />
+    <MESSAGE value="fix: node js" />
+    <MESSAGE value="fix: mistakes" />
+    <MESSAGE value="feat: add cors" />
+    <MESSAGE value="feat: add user w/o auth" />
+    <MESSAGE value="feat: add user data" />
+    <MESSAGE value="fix: update user data" />
+    <MESSAGE value="feat: user data Math" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: user data Math" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="433" y="610" key="#ESLint" timestamp="1609067559757">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="433" y="610" key="#ESLint/0.0.2560.1400@0.0.2560.1400" timestamp="1609067559757" />
+    <state x="295" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609304593443">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="295" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1609304593443" />
+    <state x="274" y="385" key="#deploy" timestamp="1609083556572">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="274" y="385" key="#deploy/0.0.2560.1400@0.0.2560.1400" timestamp="1609083556572" />
+    <state width="649" height="466" key="DebuggerActiveHint" timestamp="1612114425263">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="649" height="466" key="DebuggerActiveHint/0.0.2560.1400@0.0.2560.1400" timestamp="1612114425263" />
+    <state x="756" y="236" key="FileChooserDialogImpl" timestamp="1612245362577">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="756" y="236" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1612245362577" />
+    <state width="1235" height="223" key="GridCell.Tab.0.bottom" timestamp="1612203168011">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1235" height="223" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1612203168011" />
+    <state width="1235" height="223" key="GridCell.Tab.0.center" timestamp="1612203168011">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1235" height="223" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1612203168011" />
+    <state width="1235" height="223" key="GridCell.Tab.0.left" timestamp="1612203168011">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1235" height="223" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1612203168011" />
+    <state width="1235" height="223" key="GridCell.Tab.0.right" timestamp="1612203168011">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1235" height="223" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1612203168011" />
+    <state width="1256" height="313" key="GridCell.Tab.1.bottom" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.1.center" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.1.left" timestamp="1612114937848">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937848" />
+    <state width="1256" height="313" key="GridCell.Tab.1.right" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.2.bottom" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.2.center" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.2.left" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.2.right" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.3.bottom" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.3.center" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.3.left" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state width="1256" height="313" key="GridCell.Tab.3.right" timestamp="1612114937849">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1256" height="313" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1612114937849" />
+    <state x="66" y="228" key="SettingsEditor" timestamp="1609347668063">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="66" y="228" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1609347668063" />
+    <state x="157" y="432" key="Vcs.Push.Dialog.v2" timestamp="1612202841434">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="157" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1612202841434" />
+    <state x="366" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609854756214">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="366" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1609854756214" />
+    <state x="272" y="435" width="585" height="530" key="find.popup" timestamp="1609348103004">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="272" y="435" width="585" height="530" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1609348103004" />
+    <state x="284" y="310" key="run.anything.popup" timestamp="1609273307637">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="284" y="310" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1609273307637" />
+  </component>
+</project>
